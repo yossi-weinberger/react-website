@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import { Link } from "react-router-dom";
 import { speakersList } from "../../data/speakersLinks";
 import { products } from "../../screens/speakers";
 import "./productsGrid.css";
@@ -40,7 +41,7 @@ export default function ProductsGrid({ products }) {
 // Component to display a single product in the grid
 function GridItem({ item }) {
   return (
-    <div className="grid-item">
+    <Link to={`/product/${item._id}`} className="grid-item">
       <img src={item.img} />
       <div>
         <h2>{item.title}</h2>
@@ -52,6 +53,6 @@ function GridItem({ item }) {
           <button>cart</button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

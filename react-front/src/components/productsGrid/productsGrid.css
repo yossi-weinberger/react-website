@@ -28,6 +28,8 @@
 }
 
 .grid-item {
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: column;
   height: 400px;

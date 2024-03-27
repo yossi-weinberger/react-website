@@ -4,6 +4,7 @@ import About from "../screens/about";
 import Contact from "../screens/contact";
 import Speakers from "../screens/speakers";
 import NewProduct from "../screens/new-product";
+import ProductPage from "../components/product-page/productPage";
 
 export const links = [
   {
@@ -35,5 +36,11 @@ export const links = [
     title: "New product",
     href: "/new-product",
     element: <NewProduct />,
+  },
+  {
+    title: "Speakers",
+    href: "/product/:id",
+    element: <ProductPage />,
+    excluded: true,
   },
 ];
